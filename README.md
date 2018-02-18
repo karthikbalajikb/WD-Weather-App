@@ -18,11 +18,13 @@ It is hosted on Amazon EC2 instance with node + express web server . It is runni
 ## What could be done in more time 
 
 1. USER INTERFACE 
-..1. Changing background image or color based on climate 
-..2. Graphical Report
+
+- Changing background image or color based on climate 
+-  Graphical Report
 
 2. FUNCTIONALITY
-..1. Add more filters for search based on country,city,geolocation .
-..2. Adding google maps .
-..3. Showing up weather report in multiple temparture format ex: celsius,fahrenheit .
-..4. Pictorial represenation with graphs , charts for temperature vs time 
+
+- Add more filters for search based on country,city,geolocation .
+- Adding google maps .
+- Showing up weather report in multiple temparture format ex: celsius,fahrenheit .
+- Pictorial represenation with graphs , charts for temperature vs time 
