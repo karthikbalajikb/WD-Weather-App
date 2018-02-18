@@ -15,12 +15,18 @@ Run `yarn build` or `npm run build` to build the project. The build artifacts wi
 
 It is hosted on Amazon EC2 instance with node + express web server . It is running at http://34.235.1.95:9000/
 
+## Current Features
+
+- Get dynamic 5 days weather forecast based on the city selected
+- Dropdown with auto search enabled
+- Swipable UI when used on touch screens
+
 ## What could be done in more time 
 
 1. USER INTERFACE 
 
 - Changing background image or color based on climate 
--  Graphical Report
+- Graphical Report
 
 2. FUNCTIONALITY
 
