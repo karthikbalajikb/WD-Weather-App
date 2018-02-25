@@ -6,7 +6,7 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 
-import WDAutoSearchSelect from "../autoSearchSelect/AutoSearchSelect";
+import WDAutoSearchSelect from '../autoSearchSelect/AutoSearchSelect';
 
 const styles = {
   root: {
@@ -22,10 +22,7 @@ const styles = {
 };
 
 class WDAppBar extends React.Component {
-
-  myCallback = e => {
-    this.props.selectedCity(e)
-  }
+  myCallback = e => this.props.selectedCity(e);
 
   render() {
     const { classes } = this.props;
@@ -34,11 +31,11 @@ class WDAppBar extends React.Component {
         <AppBar position="static">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <i className="material-icons">cloud</i>
+              <i className="material-icons">cloud</i>
             </IconButton>
             <Typography variant="title" color="inherit" className={classes.flex}>
               WD Weather App
-          </Typography>
+            </Typography>
             <WDAutoSearchSelect callbackFromParent={this.myCallback} />
           </Toolbar>
         </AppBar>
@@ -49,6 +46,7 @@ class WDAppBar extends React.Component {
 
 WDAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
+  selectedCity: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(WDAppBar);

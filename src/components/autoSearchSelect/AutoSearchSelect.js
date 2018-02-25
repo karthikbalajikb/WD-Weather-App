@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 import Input from 'material-ui/Input';
-import { MenuItem } from 'material-ui/Menu';
 import ArrowDropDownIcon from 'material-ui-icons/ArrowDropDown';
 import CancelIcon from 'material-ui-icons/Cancel';
 import ArrowDropUpIcon from 'material-ui-icons/ArrowDropUp';
@@ -11,6 +10,8 @@ import ClearIcon from 'material-ui-icons/Clear';
 import Chip from 'material-ui/Chip';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
+
+import Option from './option';
 
 const suggestions = [
   { label: 'Bangalore' },
@@ -31,45 +32,21 @@ const suggestions = [
   label: suggestion.label,
 }));
 
-class Option extends React.Component {
-  handleClick = event => {
-    this.props.onSelect(this.props.option, event);
-  };
-
-  render() {
-    const { children, isFocused, isSelected, onFocus } = this.props;
-
-    return (
-      <MenuItem
-        onFocus={onFocus}
-        selected={isFocused}
-        onClick={this.handleClick}
-        component="div"
-        style={{
-          fontWeight: isSelected ? 500 : 400,
-        }}
-      >
-        {children}
-      </MenuItem>
-    );
-  }
-}
-
 function SelectWrapped(props) {
   const { classes, ...other } = props;
 
   return (
     <Select
       optionComponent={Option}
-      noResultsText={<Typography>{'No results found'}</Typography>}
-      arrowRenderer={arrowProps => {
-        return arrowProps.isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />;
-      }}
+      noResultsText={<Typography>No results found</Typography>}
+      arrowRenderer={arrowProps =>
+        (arrowProps.isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />)
+      }
       clearRenderer={() => <ClearIcon />}
-      valueComponent={valueProps => {
+      valueComponent={(valueProps) => {
         const { value, children, onRemove } = valueProps;
 
-        const onDelete = event => {
+        const onDelete = (event) => {
           event.preventDefault();
           event.stopPropagation();
           onRemove(value);
@@ -94,6 +71,10 @@ function SelectWrapped(props) {
   );
 }
 
+SelectWrapped.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
 const ITEM_HEIGHT = 48;
 
 const styles = theme => ({
@@ -102,9 +83,9 @@ const styles = theme => ({
     // height: 200,
     width: 200,
   },
-  width:{
+  width: {
     width: '50%',
-    float: 'right'
+    float: 'right',
   },
   chip: {
     margin: theme.spacing.unit / 4,
@@ -161,7 +142,7 @@ const styles = theme => ({
       fontFamily: theme.typography.fontFamily,
       fontSize: theme.typography.pxToRem(16),
       padding: 0,
-      color: 'white'
+      color: 'white',
     },
     '.Select-placeholder': {
       opacity: 0.42,
@@ -207,11 +188,14 @@ const styles = theme => ({
 });
 
 class WDAutoSearchSelect extends React.Component {
-  state = {
-    single: null,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      single: null,
+    };
+  }
 
-  handleChangeSingle = single => {
+  handleChangeSingle = (single) => {
     this.setState({
       single,
     });
@@ -239,7 +223,6 @@ class WDAutoSearchSelect extends React.Component {
             options: suggestions,
           }}
         />
-
       </div>
     );
   }
@@ -247,6 +230,7 @@ class WDAutoSearchSelect extends React.Component {
 
 WDAutoSearchSelect.propTypes = {
   classes: PropTypes.object.isRequired,
+  callbackFromParent: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(WDAutoSearchSelect);
