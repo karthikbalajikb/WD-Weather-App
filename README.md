@@ -1,5 +1,8 @@
 # WD Weather App
 
+![wd](https://user-images.githubusercontent.com/8594076/36646017-c340bf96-1a97-11e8-99da-d4d5e48ba2e6.png)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Development server
