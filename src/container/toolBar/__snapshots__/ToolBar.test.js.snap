@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container : Toolbar ToolBar snapshot test 1`] = `
+<div
+  className="WDAppBar-root-1"
+>
+  <header
+    className="MuiPaper-root-12 MuiPaper-shadow4-18 MuiAppBar-root-4 MuiAppBar-positionStatic-8 MuiAppBar-colorPrimary-10"
+  >
+    <div
+      className="MuiToolbar-root-39 MuiToolbar-gutters-40"
+    >
+      <button
+        aria-label="Menu"
+        className="MuiButtonBase-root-47 MuiIconButton-root-41 MuiIconButton-colorInherit-42 WDAppBar-menuButton-3"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-46"
+        >
+          <i
+            className="material-icons"
+          >
+            cloud
+          </i>
+        </span>
+        <span
+          className="MuiTouchRipple-root-49"
+        />
+      </button>
+      <h2
+        className="MuiTypography-root-56 MuiTypography-title-62 MuiTypography-colorInherit-75 WDAppBar-flex-2"
+      >
+        WD Weather App
+      </h2>
+      <div
+        className="WDAutoSearchSelect-root-80"
+      >
+        <div
+          className="MuiInput-root-83 MuiInput-inkbar-85 MuiInput-underline-89 WDAutoSearchSelect-width-81"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <div
+            className="Select MuiInput-input-92 is-clearable is-searchable Select--single"
+            style={undefined}
+          >
+            <div
+              className="Select-control"
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              style={undefined}
+            >
+              <span
+                className="Select-multi-value-wrapper"
+                id="react-select-react-select-single--value"
+              >
+                <div
+                  className="Select-placeholder"
+                >
+                  Select City
+                </div>
+                <div
+                  className="Select-input"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  <input
+                    aria-activedescendant="react-select-react-select-single--value"
+                    aria-describedby={undefined}
+                    aria-expanded="false"
+                    aria-haspopup="false"
+                    aria-label={undefined}
+                    aria-labelledby={undefined}
+                    aria-owns=""
+                    className={undefined}
+                    id="react-select-single"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={false}
+                    role="combobox"
+                    style={
+                      Object {
+                        "boxSizing": "content-box",
+                        "width": "5px",
+                      }
+                    }
+                    tabIndex={undefined}
+                    value=""
+                  />
+                  <div
+                    style={
+                      Object {
+                        "height": 0,
+                        "left": 0,
+                        "overflow": "scroll",
+                        "position": "absolute",
+                        "top": 0,
+                        "visibility": "hidden",
+                        "whiteSpace": "pre",
+                      }
+                    }
+                  >
+                    
+                  </div>
+                </div>
+              </span>
+              <span
+                className="Select-arrow-zone"
+                onMouseDown={[Function]}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root-98"
+                  color={undefined}
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;

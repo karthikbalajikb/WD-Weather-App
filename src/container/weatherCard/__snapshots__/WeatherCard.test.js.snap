@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container: WeatherCard WeatherCard snapshot test 1`] = `
+<div>
+  <h1
+    className="MuiTypography-root-2 MuiTypography-headline-7 MuiTypography-colorTextSecondary-24 WeatherCard-paper-1"
+  >
+    <span>
+       Loading ... 
+    </span>
+  </h1>
+</div>
+`;

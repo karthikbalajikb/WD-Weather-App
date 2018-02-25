@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: WDCard Snapshot testing 1`] = `
+<div>
+  <div
+    className="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9 WDCard-card-1"
+  >
+    <div
+      className="WDCard-details-2"
+    >
+      <div
+        className="MuiCardContent-root-35 WDCard-content-3"
+      >
+        <h1
+          className="MuiTypography-root-36 MuiTypography-display4-37 WDCard-font-7"
+        >
+          23
+          <span>
+            °C
+          </span>
+        </h1>
+        <h1
+          className="MuiTypography-root-36 MuiTypography-headline-41 MuiTypography-colorTextSecondary-58"
+        >
+          <span>
+             
+            test
+             
+          </span>
+        </h1>
+        <h3
+          className="MuiTypography-root-36 MuiTypography-subheading-43 MuiTypography-colorTextSecondary-58"
+        >
+          <span>
+            Humidity : 
+            100
+            %
+          </span>
+        </h3>
+        <h3
+          className="MuiTypography-root-36 MuiTypography-subheading-43 MuiTypography-colorTextSecondary-58"
+        >
+          <span>
+            Wind 
+            20
+             m/s 
+          </span>
+        </h3>
+      </div>
+      <div
+        className="WDCard-controls-5"
+      />
+    </div>
+    <div
+      className="MuiCardMedia-root-60 WDCard-cover-4"
+      src={undefined}
+      style={
+        Object {
+          "backgroundImage": "url(http://openweathermap.org/img/w/01n.png)",
+        }
+      }
+    />
+  </div>
+</div>
+`;
