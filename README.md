@@ -10,6 +10,10 @@ Run `yarn start` or `npm start` for a dev server. Navigate to `http://localhost:
 
 Run `yarn build` or `npm run build` to build the project. The build artifacts will be stored in the `build` directory.
 
+## Lint
+
+Run `yarn lint` or `npm run lint` to check linting error in terminal .
+
 ## Test
 
 Run `yarn test` or `npm run test` to run the test scripts (unit test and snapshot test) . Test scripts are written using [jest](https://github.com/facebook/jest) and [enzyme](https://github.com/airbnb/enzyme) .
