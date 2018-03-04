@@ -3,3 +3,18 @@
   background-color: "white";
   font-size: 0.875rem;
 }
+
+.chart-root {
+  flex-grow: 1;
+}
+
+.chart-paper {
+  height: auto !important;
+}
+
+@media screen and (max-width: 800px) {
+  .chart-paper {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

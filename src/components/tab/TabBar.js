@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
+import GridList, { GridListTile } from 'material-ui/GridList';
 
 import WDHourTab from '../hourTab/HourTab';
 import './TabBar.css';
+
+import WDChart from '../chart/Chart';
 
 class WDTabs extends React.Component {
   state = {
@@ -38,11 +41,36 @@ class WDTabs extends React.Component {
         </AppBar>
 
         <SwipeableViews index={this.state.value} onChangeIndex={this.handleChangeIndex}>
+
           {this.props.weatherData.map(element => (
             <div key={element[0]} className="tabContainerStyle">
               <WDHourTab hourWeatherReport={element[1]} />
+
+              <div className="chart-root">
+                <GridList cellHeight={180} cols={2}>
+                  <GridListTile key="chart1" cols={1} className="chart-paper">
+                    <WDChart
+                      yLabel="Temp(celsius)"
+                      xTimeCount={element[1].map((d, i) => i)}
+                      xTimeSeries={element[1].map(d => d.dateTime.replace(/\s/g, ''))}
+                      yTempVale={element[1].map(d => ({ y: d.temp_max }))}
+                    />
+                  </GridListTile>
+
+                  <GridListTile key="chart2" cols={1} className="chart-paper">
+                    <WDChart
+                      yLabel="Wind(m/s)"
+                      xTimeCount={element[1].map((d, i) => i)}
+                      xTimeSeries={element[1].map(d => d.dateTime.replace(/\s/g, ''))}
+                      yTempVale={element[1].map(d => ({ y: d.wind }))}
+                    />
+                  </GridListTile>
+                </GridList>
+              </div>
+
             </div>
           ))}
+
         </SwipeableViews>
       </div>
     );
