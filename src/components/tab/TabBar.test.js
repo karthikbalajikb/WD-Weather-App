@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { createShallow } from 'material-ui/test-utils';
 import WDTabs from './TabBar';
 
 describe('Component : WDTabs', () => {
@@ -59,14 +58,13 @@ describe('Component : WDTabs', () => {
 
   it('intial state should be 0', () => {
     const wrapper = shallow(<WDTabs weatherData={weatherData} />);
-    expect(wrapper.dive().state('value')).toEqual(0);
+    expect(wrapper.state('value')).toEqual(0);
   });
 
   describe('Handle tab change', () => {
     let wrapper;
     beforeEach(() => {
-      const shallowMUI = createShallow({ dive: true });
-      wrapper = shallowMUI(<WDTabs weatherData={weatherData} />);
+      wrapper = shallow(<WDTabs weatherData={weatherData} />);
     });
 
     it('handle tab change through click', () => {

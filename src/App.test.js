@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { mount } from 'enzyme';
-import { createShallow } from 'material-ui/test-utils';
+import { mount, shallow } from 'enzyme';
 import App from './App';
 import WeatherCard from './container/weatherCard/WeatherCard';
 
@@ -14,8 +13,7 @@ describe('App', () => {
 
   describe('Initial State ', () => {
     it('city state should be null', () => {
-      const shallowMUI = createShallow({ dive: true });
-      const wrap = shallowMUI(<App />);
+      const wrap = shallow(<App />);
       const cityState = wrap.state('city');
       expect(cityState).toEqual(null);
     });
@@ -31,8 +29,7 @@ describe('App', () => {
     let wrap;
 
     beforeEach(() => {
-      const shallowMUI = createShallow({ dive: true });
-      wrap = shallowMUI(<App />);
+      wrap = shallow(<App />);
       wrap.instance().selectedCity('Bangalore');
     });
 

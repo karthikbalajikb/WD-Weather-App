@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { createShallow, createMount } from 'material-ui/test-utils';
 import renderer from 'react-test-renderer';
 import WeatherCard from './WeatherCard';
 import WDTabs from '../../components/tab/TabBar';
@@ -69,22 +68,15 @@ describe('Container: WeatherCard', () => {
 
   it('report inital state should be empty array', () => {
     const shallowWrap = shallow(<WeatherCard selectedCity={city} />);
-    const dropdownState = shallowWrap.dive().state('report');
+    const dropdownState = shallowWrap.state('report');
     expect(dropdownState).toEqual([]);
   });
 
   describe('Loading state changes', () => {
-    let shallowMUI;
-    let mountWrap;
-
-    beforeEach(() => {
-      shallowMUI = createShallow({ dive: true });
-      mountWrap = mount(<WeatherCard selectedCity={city} />);
-    });
-
     it('Loading should be seen when report state is empty', () => {
-      const wrap = shallowMUI(<WeatherCard selectedCity={city} />);
+      const wrap = shallow(<WeatherCard selectedCity={city} />);
       const reportState = wrap.state('report');
+      const mountWrap = mount(<WeatherCard selectedCity={city} />);
       const Typography = mountWrap.find('Typography');
 
       expect(reportState.length).toEqual(0);
@@ -93,7 +85,7 @@ describe('Container: WeatherCard', () => {
     });
 
     it('Loading should be removed and WDTabs component must be rendered when report state is not empty', () => {
-      const wrap = shallowMUI(<WeatherCard selectedCity={city} />);
+      const wrap = shallow(<WeatherCard selectedCity={city} />);
       wrap.setState({ report: weatherReport });
       const reportState = wrap.state('report');
       const WDTabsComp = wrap.find(WDTabs);
@@ -104,9 +96,8 @@ describe('Container: WeatherCard', () => {
   });
 
   it('Test componentWillReceiveProps() by passing new city', () => {
-    const mountMUI = createMount();
     const newCity = 'Bangalore';
-    const wrap = mountMUI(<WeatherCard selectedCity={city} />);
+    const wrap = mount(<WeatherCard selectedCity={city} />);
     wrap.setProps({ selectedCity: newCity });
     const selectedCity = wrap.prop('selectedCity');
     expect(selectedCity).toEqual(newCity);

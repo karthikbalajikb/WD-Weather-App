@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { createShallow } from 'material-ui/test-utils';
 import WDHourTab from './HourTab';
 
 describe('Component : WDHourTab', () => {
@@ -31,15 +30,14 @@ describe('Component : WDHourTab', () => {
 
   it('Intial tab index state should be 0', () => {
     const wrapper = shallow(<WDHourTab hourWeatherReport={hourWeatherReport} />);
-    expect(wrapper.dive().state('value')).toEqual(0);
+    expect(wrapper.state('value')).toEqual(0);
   });
 
   describe('Handle Tab Change', () => {
     let wrapper;
 
     beforeEach(() => {
-      const shallowMUI = createShallow({ dive: true });
-      wrapper = shallowMUI(<WDHourTab hourWeatherReport={hourWeatherReport} />);
+      wrapper = shallow(<WDHourTab hourWeatherReport={hourWeatherReport} />);
     });
 
     it('handle tab change through click', () => {

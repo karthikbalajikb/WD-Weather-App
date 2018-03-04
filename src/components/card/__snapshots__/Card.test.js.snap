@@ -3,16 +3,16 @@
 exports[`Component: WDCard Snapshot testing 1`] = `
 <div>
   <div
-    className="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9 WDCard-card-1"
+    className="MuiPaper-root-1 MuiPaper-shadow2-5 MuiPaper-rounded-2 card"
   >
     <div
-      className="WDCard-details-2"
+      className="details"
     >
       <div
-        className="MuiCardContent-root-35 WDCard-content-3"
+        className="MuiCardContent-root-28 content"
       >
         <h1
-          className="MuiTypography-root-36 MuiTypography-display4-37 WDCard-font-7"
+          className="MuiTypography-root-29 MuiTypography-display4-30 font"
         >
           23
           <span>
@@ -20,39 +20,28 @@ exports[`Component: WDCard Snapshot testing 1`] = `
           </span>
         </h1>
         <h1
-          className="MuiTypography-root-36 MuiTypography-headline-41 MuiTypography-colorTextSecondary-58"
+          className="MuiTypography-root-29 MuiTypography-headline-34 MuiTypography-colorTextSecondary-51"
         >
-          <span>
-             
-            test
-             
-          </span>
+          test
         </h1>
         <h3
-          className="MuiTypography-root-36 MuiTypography-subheading-43 MuiTypography-colorTextSecondary-58"
+          className="MuiTypography-root-29 MuiTypography-subheading-36 MuiTypography-colorTextSecondary-51"
         >
-          <span>
-            Humidity : 
-            100
-            %
-          </span>
+          Humidity : 
+          100
+          %
         </h3>
         <h3
-          className="MuiTypography-root-36 MuiTypography-subheading-43 MuiTypography-colorTextSecondary-58"
+          className="MuiTypography-root-29 MuiTypography-subheading-36 MuiTypography-colorTextSecondary-51"
         >
-          <span>
-            Wind 
-            20
-             m/s 
-          </span>
+          Wind 
+          20
+           m/s
         </h3>
       </div>
-      <div
-        className="WDCard-controls-5"
-      />
     </div>
     <div
-      className="MuiCardMedia-root-60 WDCard-cover-4"
+      className="MuiCardMedia-root-53 cover"
       src={undefined}
       style={
         Object {

@@ -3,7 +3,7 @@
 exports[`Container: WeatherCard WeatherCard snapshot test 1`] = `
 <div>
   <h1
-    className="MuiTypography-root-2 MuiTypography-headline-7 MuiTypography-colorTextSecondary-24 WeatherCard-paper-1"
+    className="MuiTypography-root-1 MuiTypography-headline-6 MuiTypography-colorTextSecondary-23 paper"
   >
     <span>
        Loading ... 

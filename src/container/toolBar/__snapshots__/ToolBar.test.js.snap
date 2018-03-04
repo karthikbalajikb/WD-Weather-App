@@ -2,17 +2,17 @@
 
 exports[`Container : Toolbar ToolBar snapshot test 1`] = `
 <div
-  className="WDAppBar-root-1"
+  className="appbar-root"
 >
   <header
-    className="MuiPaper-root-12 MuiPaper-shadow4-18 MuiAppBar-root-4 MuiAppBar-positionStatic-8 MuiAppBar-colorPrimary-10"
+    className="MuiPaper-root-9 MuiPaper-shadow4-15 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-7"
   >
     <div
-      className="MuiToolbar-root-39 MuiToolbar-gutters-40"
+      className="MuiToolbar-root-36 MuiToolbar-gutters-37"
     >
       <button
         aria-label="Menu"
-        className="MuiButtonBase-root-47 MuiIconButton-root-41 MuiIconButton-colorInherit-42 WDAppBar-menuButton-3"
+        className="MuiButtonBase-root-44 MuiIconButton-root-38 MuiIconButton-colorInherit-39 menuButton"
         disabled={false}
         onBlur={[Function]}
         onFocus={[Function]}
@@ -28,7 +28,7 @@ exports[`Container : Toolbar ToolBar snapshot test 1`] = `
         type="button"
       >
         <span
-          className="MuiIconButton-label-46"
+          className="MuiIconButton-label-43"
         >
           <i
             className="material-icons"
@@ -37,24 +37,24 @@ exports[`Container : Toolbar ToolBar snapshot test 1`] = `
           </i>
         </span>
         <span
-          className="MuiTouchRipple-root-49"
+          className="MuiTouchRipple-root-46"
         />
       </button>
       <h2
-        className="MuiTypography-root-56 MuiTypography-title-62 MuiTypography-colorInherit-75 WDAppBar-flex-2"
+        className="MuiTypography-root-53 MuiTypography-title-59 MuiTypography-colorInherit-72 flex"
       >
         WD Weather App
       </h2>
       <div
-        className="WDAutoSearchSelect-root-80"
+        className="root"
       >
         <div
-          className="MuiInput-root-83 MuiInput-inkbar-85 MuiInput-underline-89 WDAutoSearchSelect-width-81"
+          className="MuiInput-root-77 MuiInput-inkbar-79 MuiInput-underline-83 width"
           onBlur={[Function]}
           onFocus={[Function]}
         >
           <div
-            className="Select MuiInput-input-92 is-clearable is-searchable Select--single"
+            className="Select MuiInput-input-86 is-clearable is-searchable Select--single"
             style={undefined}
           >
             <div
@@ -130,7 +130,7 @@ exports[`Container : Toolbar ToolBar snapshot test 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root-98"
+                  className="MuiSvgIcon-root-92"
                   color={undefined}
                   focusable="false"
                   viewBox="0 0 24 24"
