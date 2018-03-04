@@ -43,6 +43,3 @@ deploy:
   region: us-east-1
   on:
     repo: karthikbalajikb/WD-Weather-App
-
-after_deploy:
-  - echo "Performing after deploy procedures..."
