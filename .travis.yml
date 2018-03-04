@@ -10,6 +10,18 @@ cache:
   directories:
     - node_modules
 
+before_script:
+  - npm install 
+
+script:
+  - npm run build
+
+before_deploy:
+  - cd "build"
+  - zip -r latest *
+  - mkdir -p dpl_cd_upload
+  - mv latest.zip dpl_cd_upload/latest.zip
+
 deploy:
 - provider: s3
   access_key_id: $AWS_ACCESS_KEY
@@ -32,14 +44,5 @@ deploy:
   on:
     repo: karthikbalajikb/WD-Weather-App
 
-before_script:
-  - npm install 
-
-script:
-  - npm run build
-
-after_success:
-  - cd build
-  - zip -r latest *
-  - mkdir -p dpl_cd_upload
-  - mv latest.zip dpl_cd_upload/latest.zip
+after_deploy:
+  - echo "Performing after deploy procedures..."
