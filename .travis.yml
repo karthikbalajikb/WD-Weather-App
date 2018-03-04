@@ -17,6 +17,7 @@ script:
   - npm run build
 
 before_deploy:
+  - mv appspec.yml build
   - cd "build"
   - zip -r latest *
   - mkdir -p dpl_cd_upload
