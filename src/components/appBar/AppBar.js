@@ -1,39 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 
+import './AppBar.css';
 import WDAutoSearchSelect from '../autoSearchSelect/AutoSearchSelect';
-
-const styles = {
-  root: {
-    width: '100%',
-  },
-  flex: {
-    flex: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
-};
 
 class WDAppBar extends React.Component {
   myCallback = e => this.props.selectedCity(e);
 
   render() {
-    const { classes } = this.props;
     return (
-      <div className={classes.root}>
+      <div className="appbar-root">
         <AppBar position="static">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+            <IconButton className="menuButton" color="inherit" aria-label="Menu">
               <i className="material-icons">cloud</i>
             </IconButton>
-            <Typography variant="title" color="inherit" className={classes.flex}>
+            <Typography variant="title" color="inherit" className="flex">
               WD Weather App
             </Typography>
             <WDAutoSearchSelect callbackFromParent={this.myCallback} />
@@ -45,8 +31,7 @@ class WDAppBar extends React.Component {
 }
 
 WDAppBar.propTypes = {
-  classes: PropTypes.object.isRequired,
   selectedCity: PropTypes.func.isRequired,
 };
 
-export default withStyles(styles)(WDAppBar);
+export default WDAppBar;

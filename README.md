@@ -1,7 +1,6 @@
-# WD Weather App
+# WD Weather App [![Build Status](https://travis-ci.org/karthikbalajikb/WD-Weather-App.svg?branch=master)](https://travis-ci.org/karthikbalajikb/WD-Weather-App)
 
 ![wd](https://user-images.githubusercontent.com/8594076/36646017-c340bf96-1a97-11e8-99da-d4d5e48ba2e6.png)
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -37,12 +36,12 @@ It is hosted on Amazon EC2 instance with node + express web server . It is runni
 
 ## What could be done in more time
 
-1. USER INTERFACE
+1.  USER INTERFACE
 
 * Changing background image or color based on climate
 * Graphical Report
 
-2. FUNCTIONALITY
+2.  FUNCTIONALITY
 
 * Add more filters for search based on country,city,geolocation .
 * Adding google maps .

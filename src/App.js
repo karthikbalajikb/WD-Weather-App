@@ -1,19 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Typography from 'material-ui/Typography';
-import { withStyles } from 'material-ui/styles';
 
 import ToolBar from './container/toolBar/ToolBar';
 import WeatherCard from './container/weatherCard/WeatherCard';
-
-const styles = {
-  paper: {
-    width: '100%',
-    margin: 'auto',
-    textAlign: 'center',
-    paddingTop: '50px',
-  },
-};
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,13 +17,12 @@ class App extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
     const { city } = this.state;
     return (
       <div>
         <ToolBar selectedCity={this.selectedCity} />
         {this.state.city === null ? (
-          <Typography variant="headline" className={classes.paper} color="textSecondary">
+          <Typography variant="headline" className="paper" color="textSecondary">
             <span> Select a city from dropdown </span>
           </Typography>
         ) : (
@@ -44,8 +33,4 @@ class App extends React.Component {
   }
 }
 
-App.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(App);
+export default App;

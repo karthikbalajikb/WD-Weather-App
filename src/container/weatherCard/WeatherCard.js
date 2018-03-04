@@ -1,19 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from 'material-ui/Typography';
-import { withStyles } from 'material-ui/styles';
-
 import WDTabs from '../../components/tab/TabBar';
 import getWeatherDetails from './WeatherCard.service';
 
-const styles = {
-  paper: {
-    width: '100%',
-    margin: 'auto',
-    textAlign: 'center',
-    paddingTop: '50px',
-  },
-};
+import './WeatherCard.css';
 
 class WeatherCard extends React.Component {
   constructor(props) {
@@ -58,13 +49,12 @@ class WeatherCard extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
     return (
       <div>
         {this.state.report.length > 0 ? (
           <WDTabs weatherData={this.state.report} />
         ) : (
-          <Typography variant="headline" className={classes.paper} color="textSecondary">
+          <Typography variant="headline" color="textSecondary" className="paper">
             <span> Loading ... </span>
           </Typography>
         )}
@@ -74,8 +64,7 @@ class WeatherCard extends React.Component {
 }
 
 WeatherCard.propTypes = {
-  classes: PropTypes.object.isRequired,
   selectedCity: PropTypes.string.isRequired,
 };
 
-export default withStyles(styles)(WeatherCard);
+export default WeatherCard;

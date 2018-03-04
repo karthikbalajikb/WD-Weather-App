@@ -1,0 +1,25 @@
+/**
+* Overriding Material-UI CSS . Use !important .
+*/
+.card {
+  display: flex !important;
+}
+
+.details {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+.content {
+  flex: 1 0 auto !important;
+}
+
+.cover {
+  width: 151px !important;
+  height: 151px !important;
+}
+
+.font {
+  font-size: 700% !important;
+}

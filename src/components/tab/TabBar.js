@@ -1,31 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
 import SwipeableViews from 'react-swipeable-views';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
-import Typography from 'material-ui/Typography';
 
 import WDHourTab from '../hourTab/HourTab';
-
-function TabContainer({ children, dir }) {
-  return (
-    <Typography component="div" dir={dir} style={{ padding: 8 * 6 }}>
-      {children}
-    </Typography>
-  );
-}
-
-TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  dir: PropTypes.string.isRequired,
-};
-
-const styles = theme => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-  },
-});
+import './TabBar.css';
 
 class WDTabs extends React.Component {
   state = {
@@ -41,10 +21,8 @@ class WDTabs extends React.Component {
   };
 
   render() {
-    const { classes, theme } = this.props;
-
     return (
-      <div className={classes.root}>
+      <div>
         <AppBar position="static" color="default">
           <Tabs
             value={this.state.value}
@@ -58,15 +36,12 @@ class WDTabs extends React.Component {
             {this.props.weatherData.map(element => <Tab label={element[0]} key={element[0]} />)}
           </Tabs>
         </AppBar>
-        <SwipeableViews
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={this.state.value}
-          onChangeIndex={this.handleChangeIndex}
-        >
+
+        <SwipeableViews index={this.state.value} onChangeIndex={this.handleChangeIndex}>
           {this.props.weatherData.map(element => (
-            <TabContainer dir={theme.direction} key={element[0]}>
+            <div key={element[0]} className="tabContainerStyle">
               <WDHourTab hourWeatherReport={element[1]} />
-            </TabContainer>
+            </div>
           ))}
         </SwipeableViews>
       </div>
@@ -75,9 +50,7 @@ class WDTabs extends React.Component {
 }
 
 WDTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
   weatherData: PropTypes.array.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(WDTabs);
+export default WDTabs;

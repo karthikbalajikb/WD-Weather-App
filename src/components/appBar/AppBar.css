@@ -1,0 +1,12 @@
+.appbar-root {
+  width: 100% !important;
+}
+
+.flex {
+  flex: 1 !important;
+}
+
+.menuButton {
+  margin-left: -12px !important;
+  margin-right: 20px !important;
+}

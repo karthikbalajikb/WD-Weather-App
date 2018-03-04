@@ -48,6 +48,7 @@ export default function getWeatherDetails(city) {
         .then(response => mapResponseToModel(response.data))
         .catch((error) => {
           console.log(error);
+          return [];
         });
     }
     return data;

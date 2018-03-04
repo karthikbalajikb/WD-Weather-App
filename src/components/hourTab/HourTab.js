@@ -1,31 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
 import SwipeableViews from 'react-swipeable-views';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
-import Typography from 'material-ui/Typography';
 
 import WDCard from '../card/Card';
-
-function TabContainer({ children, dir }) {
-  return (
-    <Typography component="div" dir={dir} style={{ padding: 8 * 6, backgroundColor: '#dfebf3' }}>
-      {children}
-    </Typography>
-  );
-}
-
-TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  dir: PropTypes.string.isRequired,
-};
-
-const styles = theme => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-  },
-});
+import './HourTab.css';
 
 class WDHourTab extends React.Component {
   state = {
@@ -41,10 +21,8 @@ class WDHourTab extends React.Component {
   };
 
   render() {
-    const { classes, theme } = this.props;
-
     return (
-      <div className={classes.root}>
+      <div>
         <AppBar position="static" color="default">
           <Tabs
             value={this.state.value}
@@ -60,15 +38,12 @@ class WDHourTab extends React.Component {
             ))}
           </Tabs>
         </AppBar>
-        <SwipeableViews
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={this.state.value}
-          onChangeIndex={this.handleChangeIndex}
-        >
+
+        <SwipeableViews index={this.state.value} onChangeIndex={this.handleChangeIndex}>
           {this.props.hourWeatherReport.map(element => (
-            <TabContainer dir={theme.direction} key={element.dt}>
+            <div key={element.dt} className="hourTabContainerStyle">
               <WDCard WeatherReport={element} />
-            </TabContainer>
+            </div>
           ))}
         </SwipeableViews>
       </div>
@@ -77,9 +52,7 @@ class WDHourTab extends React.Component {
 }
 
 WDHourTab.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
   hourWeatherReport: PropTypes.array.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(WDHourTab);
+export default WDHourTab;

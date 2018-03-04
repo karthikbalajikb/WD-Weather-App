@@ -6,20 +6,10 @@ class Option extends React.Component {
   handleClick = event => this.props.onSelect(this.props.option, event);
 
   render() {
-    const {
-      children, isFocused, isSelected, onFocus,
-    } = this.props;
+    const { children, isFocused } = this.props;
 
     return (
-      <MenuItem
-        onFocus={onFocus}
-        selected={isFocused}
-        onClick={this.handleClick}
-        component="div"
-        style={{
-          fontWeight: isSelected ? 500 : 400,
-        }}
-      >
+      <MenuItem selected={isFocused} onClick={this.handleClick}>
         {children}
       </MenuItem>
     );
@@ -29,8 +19,6 @@ class Option extends React.Component {
 Option.propTypes = {
   children: PropTypes.string.isRequired,
   isFocused: PropTypes.bool.isRequired,
-  isSelected: PropTypes.bool.isRequired,
-  onFocus: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
   option: PropTypes.object.isRequired,
 };
