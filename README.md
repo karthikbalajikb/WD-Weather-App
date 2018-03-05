@@ -33,17 +33,16 @@ It is hosted on Amazon EC2 instance with node + express web server . It is runni
 * Get dynamic 5 days weather forecast based on the city selected
 * Dropdown with auto search enabled
 * Swipable UI when used on touch screens
+* Graphical Report - Pictorial represenation with graph chart for temperature vs time and wind speed vs time
 
 ## What could be done in more time
 
 1.  USER INTERFACE
 
 * Changing background image or color based on climate
-* Graphical Report
 
 2.  FUNCTIONALITY
 
 * Add more filters for search based on country,city,geolocation .
 * Adding google maps .
 * Showing up weather report in multiple temparture format ex: celsius,fahrenheit .
-* Pictorial represenation with graphs , charts for temperature vs time
