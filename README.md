@@ -26,7 +26,7 @@ Code follows Airbnb's React style guide [Airbnb style guide](https://github.com/
 
 ## Hosting
 
-It is hosted on Amazon EC2 instance with node + express web server . It is running at http://ec2-54-146-169-247.compute-1.amazonaws.com:9000/
+It is hosted on Amazon EC2 instance with node + express web server . It is running at http://ec2-18-233-181-1.compute-1.amazonaws.com:9000/
 
 ## Current Features
 
