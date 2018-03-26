@@ -35,7 +35,7 @@ It is hosted on Amazon EC2 instance with node + express web server . It is runni
 * Swipable UI when used on touch screens
 * Graphical Report - Pictorial represenation with graph chart for temperature vs time and wind speed vs time
 
-## What could be done in more time
+## Upcoming release
 
 1.  USER INTERFACE
 
